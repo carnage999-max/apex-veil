@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050505;
+  --foreground: #e0e0e0;
+  
+  /* Brand Colors */
+  --color-brand-black: #0a0a0a;
+  --color-radar-green: #00ff41;
+  --color-electric-blue: #00f3ff;
+  --color-steel: #2a2a2a;
+  
+  /* Semantic */
+  --color-primary: var(--color-brand-black);
+  --color-secondary: var(--color-radar-green);
+  --color-accent: var(--color-electric-blue);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-steel: var(--color-steel);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-bebas: var(--font-bebas-neue);
+  --font-roboto: var(--font-roboto);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), sans-serif;
+  overflow-x: hidden;
+  /* Scanline effect overlay can be added here or as a fixed div */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bebas), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
 }
