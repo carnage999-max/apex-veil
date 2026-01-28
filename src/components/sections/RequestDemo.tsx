@@ -4,7 +4,6 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Lock, FileUp, Loader2 } from "lucide-react";
@@ -26,7 +25,6 @@ export function RequestDemo() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const { executeRecaptcha } = useGoogleReCaptcha();
 
     const {
         register,
@@ -38,13 +36,6 @@ export function RequestDemo() {
     });
 
     const onSubmit = async (data: FormValues) => {
-        /*
-        if (!executeRecaptcha) {
-            setError("reCAPTCHA not initialized");
-            return;
-        }
-        */
-
         setIsSubmitting(true);
         setError(null);
 

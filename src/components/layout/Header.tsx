@@ -17,6 +17,7 @@ const DroneVisualizer = dynamic(
 
 const navItems = [
     { name: "Home", href: "#home" },
+    { name: "Process", href: "#process" },
     { name: "Technology", href: "#technology" },
     { name: "Specs", href: "#specs" },
     { name: "Use Cases", href: "#use-cases" },

@@ -37,7 +37,7 @@ export function Hero() {
                 >
                     DISAPPEAR FROM <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-600">THE SKY</span>
-                    <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-steel font-thin tracking-[0.5em] text-zinc-500">
+                    <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-white font-thin tracking-[0.5em]">
                         WITHOUT LEAVING THE GROUND.
                     </span>
                 </motion.h1>
@@ -47,7 +47,7 @@ export function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
-                    className="max-w-2xl text-zinc-400 text-sm md:text-base leading-relaxed mb-10 border-l-2 border-secondary/50 pl-4 text-left md:text-center md:border-l-0 md:pl-0 font-light"
+                    className="max-w-2xl text-zinc-100 text-sm md:text-base leading-relaxed mb-10 border-l-2 border-secondary/50 pl-4 text-left md:text-center md:border-l-0 md:pl-0 font-light"
                 >
                     Apex Veil® is a next-generation drone-based veiling system engineered to obscure, disrupt, and control aerial visibility using coordinated swarm intelligence and adaptive cloaking technologies.
                 </motion.p>
