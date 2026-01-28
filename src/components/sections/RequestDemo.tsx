@@ -38,21 +38,23 @@ export function RequestDemo() {
     });
 
     const onSubmit = async (data: FormValues) => {
+        /*
         if (!executeRecaptcha) {
             setError("reCAPTCHA not initialized");
             return;
         }
+        */
 
         setIsSubmitting(true);
         setError(null);
 
         try {
-            const token = await executeRecaptcha("demo_request");
+            // const token = await executeRecaptcha("demo_request");
 
             const response = await fetch("/api/request-demo", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...data, captcha: token }),
+                body: JSON.stringify({ ...data, captcha: null }),
             });
 
             if (!response.ok) {

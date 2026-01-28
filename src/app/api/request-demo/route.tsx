@@ -15,7 +15,7 @@ const schema = z.object({
     email: z.string().email(),
     useCase: z.string().min(10),
     location: z.string().min(2),
-    captcha: z.string().min(1),
+    // captcha: z.string().min(1),
 });
 
 export async function POST(req: NextRequest) {
@@ -30,6 +30,7 @@ export async function POST(req: NextRequest) {
         const body = await req.json();
         const data = schema.parse(body);
 
+        /*
         // 3. Verify Captcha (Server-side)
         // Using Google Recaptcha verification logic
         const captchaSecret = process.env.RECAPTCHA_SECRET_KEY || "6LeIxAcTAAAAAGG-vFI1TnRWxZZkh3kFaPzXU6ER"; // Test Secret
@@ -43,6 +44,7 @@ export async function POST(req: NextRequest) {
                 return NextResponse.json({ message: "Security verification failed" }, { status: 400 });
             }
         }
+        */
 
         // 4. Save to DB (Graceful fallback if DB not connected)
         try {
