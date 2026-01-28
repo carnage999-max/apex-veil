@@ -4,8 +4,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import ReCAPTCHA from "react-google-recaptcha";
-import { useState, useRef } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import { Lock, FileUp, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -18,7 +18,6 @@ const formSchema = z.object({
     email: z.string().email("Invalid email address"),
     useCase: z.string().min(10, "Please describe the detailed use case"),
     location: z.string().min(2, "Deployment location required"),
-    captcha: z.string().min(1, "Verification required"),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -27,12 +26,11 @@ export function RequestDemo() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState<string | null>(null);
-    const captchaRef = useRef<ReCAPTCHA>(null);
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
     const {
         register,
         handleSubmit,
-        setValue,
         formState: { errors },
         reset,
     } = useForm<FormValues>({
@@ -40,13 +38,21 @@ export function RequestDemo() {
     });
 
     const onSubmit = async (data: FormValues) => {
+        if (!executeRecaptcha) {
+            setError("reCAPTCHA not initialized");
+            return;
+        }
+
         setIsSubmitting(true);
         setError(null);
+
         try {
+            const token = await executeRecaptcha("demo_request");
+
             const response = await fetch("/api/request-demo", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
+                body: JSON.stringify({ ...data, captcha: token }),
             });
 
             if (!response.ok) {
@@ -56,7 +62,6 @@ export function RequestDemo() {
 
             setIsSuccess(true);
             reset();
-            captchaRef.current?.reset();
         } catch (err) {
             setError(err instanceof Error ? err.message : "An unexpected error occurred");
         } finally {
@@ -177,15 +182,6 @@ export function RequestDemo() {
                             </div>
                         </div>
 
-                        <div className="mb-8 flex justify-center">
-                            <ReCAPTCHA
-                                ref={captchaRef}
-                                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"} // Use env var or test key
-                                theme="dark"
-                                onChange={(val) => setValue("captcha", val || "")}
-                            />
-                            {errors.captcha && <span className="block text-red-500 text-xs mt-2 text-center w-full">{errors.captcha.message}</span>}
-                        </div>
 
                         {error && (
                             <div className="mb-6 bg-red-900/20 border border-red-500/50 p-4 text-red-200 text-sm text-center">

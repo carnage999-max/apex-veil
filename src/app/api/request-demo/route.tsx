@@ -37,11 +37,10 @@ export async function POST(req: NextRequest) {
             method: 'POST'
         });
         const captchaResult = await captchaVerify.json();
-        if (!captchaResult.success) {
-            // Allow fallback for development if strictly local? No, enforce.
-            // But for this demo without real secret key, the test key works.
-            if (process.env.NODE_ENV === "production" && !captchaResult.success) {
-                return NextResponse.json({ message: "Invalid captcha" }, { status: 400 });
+
+        if (!captchaResult.success || (captchaResult.score && captchaResult.score < 0.5)) {
+            if (process.env.NODE_ENV === "production") {
+                return NextResponse.json({ message: "Security verification failed" }, { status: 400 });
             }
         }
 

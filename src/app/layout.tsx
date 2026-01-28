@@ -86,6 +86,8 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+import { Providers } from "@/components/Providers";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,7 +98,9 @@ export default function RootLayout({
       <body
         className={`${bebas.variable} ${roboto.variable} antialiased bg-background text-foreground selection:bg-secondary selection:text-black`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
