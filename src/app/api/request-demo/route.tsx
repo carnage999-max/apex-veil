@@ -68,8 +68,8 @@ export async function POST(req: NextRequest) {
         try {
             if (process.env.RESEND_API_KEY) {
                 await resend.emails.send({
-                    from: "Apex Veil <onboarding@resend.dev>", // Default Resend test sender
-                    to: ["ndarequests@apexveil.com"], // Authorized recipient per instructions (mock)
+                    from: "Apex Veil <info@nathanreardon.com>",
+                    to: ["nathan@membershipauto.com", "ndarequests@apexveil.com"],
                     subject: `Demo Request: ${data.organization}`,
                     react: <DemoRequestEmail {...data} />,
                 });
