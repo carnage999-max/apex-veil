@@ -8,32 +8,32 @@ import { Button } from "@/components/ui/Button";
 
 const cases = [
     {
-        title: "Military Recon",
-        desc: "Deploy instant visual denial and concealment for troop movement, staging zones, and forward operations.",
+        title: "High-Speed Pursuits",
+        desc: "End dangerous vehicle chases safely by obstructing suspect visibility from a distance.",
         icon: Crosshair,
         image: "/images/recon.png",
     },
     {
-        title: "Border Surveillance",
-        desc: "Create adaptive aerial veils across sensitive border regions to disrupt unauthorized observation and incursion.",
+        title: "Stolen Vehicle Recovery",
+        desc: "Intercept and disable stolen vehicles without risking road-side collisions or bystander injury.",
         icon: MapIcon,
         image: "/images/border.png",
     },
     {
-        title: "Urban Crowd Control",
-        desc: "Provide non-lethal, rapidly deployable visual barriers for crowd management and tactical containment.",
+        title: "Tactical Interception",
+        desc: "Drones coordinate to stop high-value suspect vehicles in complex urban environments.",
         icon: ShieldAlert,
         image: "/images/urban.png",
     },
     {
-        title: "Disaster Recovery Fog",
-        desc: "Enable controlled visibility reduction during emergency response, evacuation operations, and hazardous containment.",
+        title: "Perimeter Breach Stop",
+        desc: "Immediately stop unauthorized vehicles attempting to breach secure government or corporate facilities.",
         icon: Zap,
         image: "/images/disaster.png",
     },
     {
-        title: "VIP Convoy Cloaking",
-        desc: "Protect high-value assets and personnel through mobile, synchronized cloaking coverage.",
+        title: "Asset Protection",
+        desc: "Neutralize mobile threats targeting high-value cargo or personnel during transit.",
         icon: Truck,
         image: "/images/vip.png",
     },
@@ -80,7 +80,7 @@ export function UseCases() {
                             {/* Content */}
                             <div className="p-8">
                                 <h3 className="text-2xl font-bebas text-white mb-4 group-hover:text-secondary transition-colors">{c.title}</h3>
-                                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                                <p className="text-zinc-50 text-sm leading-relaxed mb-6">
                                     {c.desc}
                                 </p>
                                 <Button variant="outline" size="sm" className="w-full">
@@ -89,10 +89,10 @@ export function UseCases() {
                             </div>
 
                             {/* Corner Accents */}
-                            <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-zinc-600 group-hover:border-secondary transition-colors" />
-                            <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-zinc-600 group-hover:border-secondary transition-colors" />
-                            <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-zinc-600 group-hover:border-secondary transition-colors" />
-                            <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-zinc-600 group-hover:border-secondary transition-colors" />
+                            <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-zinc-400 group-hover:border-secondary transition-colors" />
+                            <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-zinc-400 group-hover:border-secondary transition-colors" />
+                            <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-zinc-400 group-hover:border-secondary transition-colors" />
+                            <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-zinc-400 group-hover:border-secondary transition-colors" />
                         </motion.div>
                     ))}
                 </div>

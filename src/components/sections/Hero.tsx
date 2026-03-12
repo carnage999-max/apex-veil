@@ -35,10 +35,10 @@ export function Hero() {
                     transition={{ duration: 1, ease: "circOut" }}
                     className="max-w-5xl text-5xl md:text-7xl lg:text-9xl font-bebas leading-[0.9] text-white tracking-widest mb-8 mix-blend-exclusion"
                 >
-                    DISAPPEAR FROM <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-600">THE SKY</span>
+                    STOP THE <br />
+                    <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-400">CHASE</span>
                     <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-white font-thin tracking-[0.5em]">
-                        WITHOUT LEAVING THE GROUND.
+                        BEFORE IT HAPPENS
                     </span>
                 </motion.h1>
 
@@ -47,9 +47,9 @@ export function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6, duration: 1 }}
-                    className="max-w-2xl text-zinc-100 text-sm md:text-base leading-relaxed mb-10 border-l-2 border-secondary/50 pl-4 text-left md:text-center md:border-l-0 md:pl-0 font-light"
+                    className="max-w-2xl text-zinc-50 text-sm md:text-base leading-relaxed mb-10 border-l-2 border-secondary/50 pl-4 text-left md:text-center md:border-l-0 md:pl-0 font-light"
                 >
-                    Apex Veil® is a next-generation drone-based veiling system engineered to obscure, disrupt, and control aerial visibility using coordinated swarm intelligence and adaptive cloaking technologies.
+                    Apex Veil® is a police utility drone designed to safely end dangerous vehicle pursuits. It deploys a specialized adhesive onto a suspect vehicle’s windshield, instantly blocking visibility and forcing the driver to slow and stop.
                 </motion.p>
 
                 {/* CTAs */}
@@ -76,16 +76,16 @@ export function Hero() {
                     className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70"
                 >
                     {[
-                        { icon: Shield, label: "Swarm Cloaking" },
+                        { icon: Shield, label: "Swarm Veiling" },
                         { icon: Wifi, label: "RF Scrambling" },
                         { icon: Cpu, label: "Coordination AI" },
                         { icon: ArrowDown, label: "Encrypted Mesh" } // Using ArrowDown as placeholder for Mesh, maybe Network if available
                     ].map((item, i) => (
                         <div key={i} className="flex flex-col items-center gap-2 group cursor-default">
                             <div className="p-3 border border-zinc-800 bg-zinc-900/50 group-hover:border-secondary/50 transition-colors">
-                                <item.icon className="w-6 h-6 text-zinc-400 group-hover:text-secondary transition-colors" />
+                                <item.icon className="w-6 h-6 text-zinc-200 group-hover:text-secondary transition-colors" />
                             </div>
-                            <span className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">{item.label}</span>
+                            <span className="text-[10px] uppercase tracking-widest text-zinc-300 font-bold">{item.label}</span>
                         </div>
                     ))}
                 </motion.div>

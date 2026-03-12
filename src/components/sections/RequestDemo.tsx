@@ -72,7 +72,7 @@ export function RequestDemo() {
             <div className="container mx-auto px-4 max-w-4xl relative z-10">
                 <div className="mb-12 text-center">
                     <h2 className="text-4xl md:text-5xl font-bebas text-white mb-4">Request Secure Demonstration</h2>
-                    <p className="text-zinc-400 max-w-2xl mx-auto">
+                    <p className="text-zinc-50 max-w-2xl mx-auto">
                         Request a secure demonstration of Apex Veil® technology. All submissions are reviewed by our technical operations team.
                     </p>
                 </div>
@@ -87,7 +87,7 @@ export function RequestDemo() {
                             <Lock className="w-8 h-8 text-green-500" />
                         </div>
                         <h3 className="text-2xl font-bebas text-white mb-2">Request Encrypted & Logged</h3>
-                        <p className="text-zinc-400">Our operations team will initiate secure contact within 24 hours.</p>
+                        <p className="text-zinc-50">Our operations team will initiate secure contact within 24 hours.</p>
                         <Button className="mt-8" variant="outline" onClick={() => setIsSuccess(false)}>
                             Submit Another Request
                         </Button>
@@ -102,7 +102,7 @@ export function RequestDemo() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                             <div className="space-y-2">
-                                <label className="text-xs font-mono uppercase text-zinc-500">Full Name</label>
+                                <label className="text-xs font-mono uppercase text-zinc-300">Full Name</label>
                                 <input
                                     {...register("name")}
                                     className="w-full bg-zinc-900/50 border border-zinc-700 focus:border-secondary p-3 text-white outline-none transition-colors"
@@ -112,7 +112,7 @@ export function RequestDemo() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-mono uppercase text-zinc-500">Organization / Agency</label>
+                                <label className="text-xs font-mono uppercase text-zinc-300">Organization / Agency</label>
                                 <input
                                     {...register("organization")}
                                     className="w-full bg-zinc-900/50 border border-zinc-700 focus:border-secondary p-3 text-white outline-none transition-colors"
@@ -122,7 +122,7 @@ export function RequestDemo() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-mono uppercase text-zinc-500">Phone Number</label>
+                                <label className="text-xs font-mono uppercase text-zinc-300">Phone Number</label>
                                 <input
                                     {...register("phone")}
                                     className="w-full bg-zinc-900/50 border border-zinc-700 focus:border-secondary p-3 text-white outline-none transition-colors"
@@ -132,7 +132,7 @@ export function RequestDemo() {
                             </div>
 
                             <div className="space-y-2">
-                                <label className="text-xs font-mono uppercase text-zinc-500">Email Address</label>
+                                <label className="text-xs font-mono uppercase text-zinc-300">Email Address</label>
                                 <input
                                     {...register("email")}
                                     className="w-full bg-zinc-900/50 border border-zinc-700 focus:border-secondary p-3 text-white outline-none transition-colors"
@@ -144,7 +144,7 @@ export function RequestDemo() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                             <div className="space-y-2">
-                                <label className="text-xs font-mono uppercase text-zinc-500">Intended Use Case</label>
+                                <label className="text-xs font-mono uppercase text-zinc-300">Intended Use Case</label>
                                 <textarea
                                     {...register("useCase")}
                                     rows={4}
@@ -156,7 +156,7 @@ export function RequestDemo() {
 
                             <div className="space-y-4">
                                 <div className="space-y-2">
-                                    <label className="text-xs font-mono uppercase text-zinc-500">Deployment Location</label>
+                                    <label className="text-xs font-mono uppercase text-zinc-300">Deployment Location</label>
                                     <input
                                         {...register("location")}
                                         className="w-full bg-zinc-900/50 border border-zinc-700 focus:border-secondary p-3 text-white outline-none transition-colors"
@@ -167,10 +167,10 @@ export function RequestDemo() {
 
                                 <div className="border border-dashed border-zinc-700 p-4 flex items-center justify-between group cursor-pointer hover:bg-zinc-900/50 transition-colors">
                                     <div className="flex items-center gap-3">
-                                        <FileUp className="w-5 h-5 text-zinc-500 group-hover:text-secondary" />
-                                        <span className="text-sm text-zinc-400">Upload NDA (Optional)</span>
+                                        <FileUp className="w-5 h-5 text-zinc-300 group-hover:text-secondary" />
+                                        <span className="text-sm text-zinc-50">Upload NDA (Optional)</span>
                                     </div>
-                                    <span className="text-[10px] text-zinc-600 bg-black px-2 py-1 border border-zinc-800">PDF/DOCX</span>
+                                    <span className="text-[10px] text-zinc-400 bg-black px-2 py-1 border border-zinc-800">PDF/DOCX</span>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ export function RequestDemo() {
                         )}
 
                         <div className="flex flex-col items-center gap-4">
-                            <div className="flex items-center gap-2 text-zinc-500 text-xs">
+                            <div className="flex items-center gap-2 text-zinc-300 text-xs">
                                 <Lock className="w-3 h-3" />
                                 <span>AES-256 ENCRYPTED SUBMISSION</span>
                             </div>

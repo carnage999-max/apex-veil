@@ -25,21 +25,21 @@ function AccordionItem({ title, count, children, isOpen, onToggle }: AccordionIt
                 )}
             >
                 <div className="flex items-center gap-4">
-                    <span className={cn("text-xs font-mono text-zinc-500", isOpen && "text-secondary")}>
+                    <span className={cn("text-xs font-mono text-zinc-300", isOpen && "text-secondary")}>
                         MOD.{count}
                     </span>
                     <span className={cn(
                         "text-xl uppercase font-bebas tracking-wider",
                         isOpen ? "text-secondary" : "text-white"
                     )}>
-                        {title}
+                        — {title}
                     </span>
                 </div>
 
                 <div className="flex items-center gap-4">
                     {isOpen && <Crosshair className="w-5 h-5 text-secondary animate-pulse" />}
                     <ChevronDown
-                        className={cn("w-5 h-5 text-zinc-500 transition-transform", isOpen && "rotate-180 text-secondary")}
+                        className={cn("w-5 h-5 text-zinc-300 transition-transform", isOpen && "rotate-180 text-secondary")}
                     />
                 </div>
             </button>
@@ -54,13 +54,13 @@ function AccordionItem({ title, count, children, isOpen, onToggle }: AccordionIt
                         className="overflow-hidden"
                     >
                         <div className="p-6 pt-0 pl-16 grid grid-cols-1 md:grid-cols-[1fr_200px] gap-8">
-                            <div className="text-zinc-400 leading-relaxed text-sm pr-8 border-l border-secondary/20 pl-4 py-2">
+                            <div className="text-zinc-200 leading-relaxed text-sm pr-8 border-l border-secondary/20 pl-4 py-2">
                                 {children}
                             </div>
                             {/* Mini Schematic Visual Placeholder */}
                             <div className="hidden md:flex items-center justify-center border border-dashed border-zinc-700 bg-black/50 min-h-[100px] relative overflow-hidden">
                                 <div className="absolute inset-0 opacity-20 bg-[linear-gradient(45deg,bg-transparent_25%,#333_25%,#333_50%,transparent_50%,transparent_75%,#333_75%,#333_100%)] bg-[length:10px_10px]" />
-                                <span className="text-[10px] text-zinc-600 font-mono">SCHEMATIC.SVG</span>
+                                <span className="text-[10px] text-zinc-400 font-mono">SCHEMATIC.SVG</span>
                             </div>
                         </div>
 

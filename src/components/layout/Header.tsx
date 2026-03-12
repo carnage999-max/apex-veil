@@ -71,7 +71,7 @@ export function Header() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="px-4 py-2 text-sm uppercase tracking-widest text-zinc-400 hover:text-secondary hover:bg-secondary/5 transition-colors relative"
+                            className="px-4 py-2 text-sm uppercase tracking-widest text-zinc-200 hover:text-secondary hover:bg-secondary/5 transition-colors relative"
                         >
                             {item.name}
                         </Link>
@@ -145,7 +145,7 @@ export function Header() {
                                             onClick={() => setIsOpen(false)}
                                             className="group flex items-end gap-4"
                                         >
-                                            <span className="text-[10px] font-mono text-zinc-600 mb-2">0{i + 1}</span>
+                                            <span className="text-[10px] font-mono text-zinc-400 mb-2">0{i + 1}</span>
                                             <span className="text-5xl sm:text-7xl font-bebas text-white group-hover:text-secondary transition-colors uppercase tracking-tight">
                                                 {item.name}
                                             </span>
@@ -171,8 +171,8 @@ export function Header() {
 
                             {/* Tactical Corner Decor */}
                             <div className="absolute bottom-10 right-10 flex flex-col items-end opacity-20">
-                                <Crosshair className="w-12 h-12 text-zinc-500 mb-2" />
-                                <span className="text-[8px] font-mono text-zinc-500 uppercase">Secure Connection Verified</span>
+                                <Crosshair className="w-12 h-12 text-zinc-300 mb-2" />
+                                <span className="text-[8px] font-mono text-zinc-300 uppercase">Secure Connection Verified</span>
                             </div>
                         </div>
                     </motion.div>

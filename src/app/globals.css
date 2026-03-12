@@ -2,13 +2,13 @@
 
 :root {
   --background: #050505;
-  --foreground: #e0e0e0;
+  --foreground: #f5f5f5;
   
   /* Brand Colors */
   --color-brand-black: #0a0a0a;
   --color-radar-green: #00ff41;
   --color-electric-blue: #00f3ff;
-  --color-steel: #2a2a2a;
+  --color-steel: #4a4a4a;
   
   /* Semantic */
   --color-primary: var(--color-brand-black);

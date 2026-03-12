@@ -8,20 +8,20 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 const steps = [
     {
         id: "01",
-        title: "Tactical Positioning",
-        desc: "Coordinated drone swarm initiates high-precision hovering protocol above target asset.",
+        title: "Target Acquisition",
+        desc: "Coordinated drone swarm initiates high-precision tracking protocol on the suspect vehicle.",
         image: "/steps/step1.png",
     },
     {
         id: "02",
-        title: "Active Deployment",
-        desc: "System synchronizes particulate dispersion, veiling the target via advanced chemical coating.",
+        title: "Adhesive Deployment",
+        desc: "System synchronizes precision spray, coating the windshield with an opaque blocking compound.",
         image: "/steps/step2.png",
     },
     {
         id: "03",
-        title: "Operational Extraction",
-        desc: "Automated extraction protocol safely removes veiling material, restoring full visibility to the asset.",
+        title: "Controlled Stop",
+        desc: "Automated tracking continues as the vehicle is forced to slow down and stop safely, allowing for secure interception.",
         image: "/steps/step3.png",
     },
 ];
@@ -35,7 +35,7 @@ export function OperationalProcess() {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="mb-20 text-center">
                     <h2 className="text-secondary text-sm font-mono uppercase tracking-[0.3em] mb-4">/// Operational Protocol</h2>
-                    <h3 className="text-5xl md:text-7xl font-bebas text-white uppercase tracking-tight">Deployment <span className="text-zinc-600">Cycle</span></h3>
+                    <h3 className="text-5xl md:text-7xl font-bebas text-white uppercase tracking-tight">Deployment <span className="text-zinc-400">Cycle</span></h3>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-4 lg:gap-8 relative">
@@ -112,7 +112,7 @@ export function OperationalProcess() {
                             >
                                 <span className="inline-block text-secondary font-mono text-xs mb-2">PROT_V.{step.id}</span>
                                 <h4 className="text-2xl font-bebas text-white mb-3 tracking-wide">{step.title}</h4>
-                                <p className="text-zinc-500 text-sm leading-relaxed max-w-[300px] mx-auto md:mx-0">
+                                <p className="text-zinc-100 text-sm leading-relaxed max-w-[300px] mx-auto md:mx-0">
                                     {step.desc}
                                 </p>
                             </motion.div>
