@@ -4,8 +4,6 @@
 import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/Button";
 import { motion } from "framer-motion";
-import { ArrowDown, Play, Shield, Wifi, Cpu } from "lucide-react";
-import Image from "next/image";
 
 // Lazy load the 3D visualizer
 const DroneVisualizer = dynamic(
@@ -66,28 +64,6 @@ export function Hero() {
                     <Button variant="outline" size="lg" onClick={() => document.getElementById('request-demo')?.scrollIntoView({ behavior: 'smooth' })}>
                         Request Demo
                     </Button>
-                </motion.div>
-
-                {/* Tech Icons */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.2, duration: 1 }}
-                    className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70"
-                >
-                    {[
-                        { icon: Shield, label: "Swarm Veiling" },
-                        { icon: Wifi, label: "RF Scrambling" },
-                        { icon: Cpu, label: "Coordination AI" },
-                        { icon: ArrowDown, label: "Encrypted Mesh" } // Using ArrowDown as placeholder for Mesh, maybe Network if available
-                    ].map((item, i) => (
-                        <div key={i} className="flex flex-col items-center gap-2 group cursor-default">
-                            <div className="p-3 border border-zinc-800 bg-zinc-900/50 group-hover:border-secondary/50 transition-colors">
-                                <item.icon className="w-6 h-6 text-zinc-200 group-hover:text-secondary transition-colors" />
-                            </div>
-                            <span className="text-[10px] uppercase tracking-widest text-zinc-300 font-bold">{item.label}</span>
-                        </div>
-                    ))}
                 </motion.div>
             </div>
 

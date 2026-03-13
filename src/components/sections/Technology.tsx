@@ -17,10 +17,7 @@ const technologyItems = [
         title: "Adhesive Deployment System",
         content: "A precision spray coats the windshield with a high-visibility-blocking compound."
     },
-    {
-        title: "Autonomous Coordination AI",
-        content: "Multiple drones coordinate movement and maintain tracking during pursuit."
-    },
+
     {
         title: "Command & Law-Enforcement Override",
         content: "Encrypted command system allowing officers full operational control."
