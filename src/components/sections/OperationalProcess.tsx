@@ -76,9 +76,9 @@ export function OperationalProcess() {
                                 transition={{ delay: index * 0.1 }}
                                 className="relative w-full max-w-[400px] mb-8 z-10"
                             >
-                                <div className="aspect-video relative overflow-hidden border border-zinc-800 p-1 bg-zinc-900/50 group-hover:border-secondary transition-colors duration-500">
-                                    <div className="absolute inset-0 bg-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
-                                    <div className="relative w-full h-full grayscale-0 md:grayscale md:group-hover:grayscale-0 md:group-hover:scale-105 transition-all duration-700">
+                                <div className="aspect-video relative overflow-hidden border border-secondary p-1 bg-zinc-900/50 group-hover:border-secondary transition-colors duration-500">
+                                    <div className="absolute inset-0 bg-secondary/5 opacity-100 group-hover:opacity-0 transition-opacity duration-500 z-10 pointer-events-none" />
+                                    <div className="relative w-full h-full grayscale-0 transition-all duration-700">
                                         <Image
                                             src={step.image}
                                             alt={step.title}
@@ -98,8 +98,8 @@ export function OperationalProcess() {
                                 </div>
 
                                 {/* Corner Accents */}
-                                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-secondary/0 group-hover:border-secondary shadow-[0_0_10px_#00ff41] opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-secondary/0 group-hover:border-secondary shadow-[0_0_10px_#00ff41] opacity-0 group-hover:opacity-100 transition-all duration-500" />
+                                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-secondary shadow-[0_0_10px_#00ff41] opacity-100 group-hover:opacity-0 transition-all duration-500" />
+                                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-secondary shadow-[0_0_10px_#00ff41] opacity-100 group-hover:opacity-0 transition-all duration-500" />
                             </motion.div>
 
                             {/* Text Content */}
