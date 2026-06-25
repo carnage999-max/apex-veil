@@ -23,6 +23,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://apexveil.com"),
+  manifest: "/manifest.webmanifest",
   title: {
     default: "Apex Veil® | Defense-Grade Drone Veiling & Stealth Technology",
     template: "%s | Apex Veil®",
@@ -81,6 +82,14 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({
