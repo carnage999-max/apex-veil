@@ -66,6 +66,18 @@ export function Contact() {
                             <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>
                             <a href="#" className="hover:text-secondary transition-colors">Terms of Engagement</a>
                         </div>
+                        <p className="mt-4 normal-case tracking-normal">
+                            Part of the{" "}
+                            <a
+                                href="https://se7eninc.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hover:text-secondary transition-colors underline"
+                            >
+                                Se7en
+                            </a>{" "}
+                            family of companies.
+                        </p>
                     </div>
                 </div>
             </div>
