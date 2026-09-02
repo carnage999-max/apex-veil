@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Bebas_Neue, Roboto } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const bebas = Bebas_Neue({
@@ -103,6 +104,11 @@ export default function RootLayout({
         className={`${bebas.variable} ${roboto.variable} antialiased bg-background text-foreground selection:bg-secondary selection:text-black`}
       >
         {children}
+        <Script
+          src="https://now-hiring-eta.vercel.app/widget.js"
+          data-icon="Siren"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
