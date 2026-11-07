@@ -105,7 +105,7 @@ export default function RootLayout({
       >
         {children}
         <Script
-          src="https://now-hiring-eta.vercel.app/widget.js"
+          src="https://hiring.se7eninc.com/widget.js"
           data-icon="Siren"
           strategy="afterInteractive"
         />
